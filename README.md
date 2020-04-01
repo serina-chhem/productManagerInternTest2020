@@ -11,9 +11,19 @@ Pay attention to :
 
 ## Exercice 1 
 
-1. Create a page with Video.js player. Generate P2P by opening 2 taps at the same time.
+1. Create a page with Video.js player. Generate P2P by opening 2 tabs at the same time.
 2. Create 2 test pages using : Cloudfront stream and Level3 stream. Generate P2P by using contentIdGenerator.
 3. Bonus : Add a button to enable/disable P2P upload.
+
+### Recommendations for the documentation
+
+
+
+### Recommendations for the dashboard 
+
+- Explain clearly what the Streamroot DNA does and what is the data shown
+
+
 
 
 ## Exercice 2
