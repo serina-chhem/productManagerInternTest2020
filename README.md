@@ -13,8 +13,12 @@ Pay attention to :
 
 Tested on iOS - Safari because not compatible on Chrome for iOS
 
-1. Create a page with Video.js player. Generate P2P by opening 2 tabs at the same time.
+1. Create a page with Video.js player. Generate P2P by opening 2 tabs at the same time. 
+The page is named video.html
+
 2. Create 2 test pages using : Cloudfront stream and Level3 stream. Generate P2P by using contentIdGenerator.
+The pages are called cloudfrontHLS.html and level3HLS.html
+
 3. Bonus : Add a button to enable/disable P2P upload.
 
 ### Recommendations for the documentation
