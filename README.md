@@ -11,6 +11,8 @@ Pay attention to :
 
 ## Exercice 1 
 
+Tested on iOS - Safari because not compatible on Chrome for iOS
+
 1. Create a page with Video.js player. Generate P2P by opening 2 tabs at the same time.
 2. Create 2 test pages using : Cloudfront stream and Level3 stream. Generate P2P by using contentIdGenerator.
 3. Bonus : Add a button to enable/disable P2P upload.

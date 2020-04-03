@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
 
      <!-- Video.js build -->
@@ -9,14 +9,9 @@
      <!-- Streamroot source handler plugin -->
      <script src="//cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
  
-     <!-- videojs-contrib-dash -->
-     <script src="//cdnjs.cloudflare.com/ajax/libs/dashjs/2.5.0/dash.all.min.js"></script>
-     <script src="//cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.9.3/videojs-dash.min.js"></script>
- 
- 
      <!-- Streamroot DNA plugin -->
-     <script src="//cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js?srKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
- 
+     <script src="//cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#srKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
+
     
      <!-- Graph -->
      <script src="//tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
@@ -26,7 +21,29 @@
 
 
     <body>
-        <div id="streamroot-graphs"> GRAPHE </div>
+        <header>EXERCICE 1.1</header>
+        <div>
+            <video id="demoplayer" width=512 height=288 class="video-js vjs-default-skin" controls autoplay muted>
+                <source src='https://demo-vod.streamroot.io/index.m3u8' type="application/x-mpegURL">
+            </video>
+        </div>
+    <script>
+        var options = {
+            dnaConfig: {},
+            html5: {
+                hlsjsConfig: {
+                    "maxBufferSize": 0,
+                    "maxBufferLength": 30,
+                    "liveSyncDuration": 30,
+                    "liveMaxLatencyDuration": Infinity
+                }
+            }
+        };
+        var player = videojs('demoplayer', options);
+        <div id="streamroot-graphs">Graphe</div>
+
+    </script>
+
     </body>
 
 
