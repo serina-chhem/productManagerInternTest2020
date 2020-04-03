@@ -9,8 +9,8 @@
     <script src="//cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
 
     <!-- videojs-contrib-dash -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/dashjs/2.5.0/dash.all.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.9.3/videojs-dash.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/dashjs/2.5.0/dash.all.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.9.3/videojs-dash.min.js"></script> -->
 
 
     <!-- Streamroot DNA plugin -->
@@ -25,8 +25,12 @@
     <body>
 
         <title> LEVEL3 HSL STREAM </title>
-        <video id="demoplayer" class="video-js" controls></video>
-            <script>
+        <h3> LEVEL3 HSL STREAM </h3>
+        <video id="demoplayer" width=512 height=288 class="video-js vjs-default-skin" controls autoplay>
+            <source src='http://vod-l3.delivery.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8' type="application/x-mpegURL">
+        </video>           
+        
+        <script>
             var options = {
                 html5: {
                 hlsjsConfig: {},
@@ -34,8 +38,14 @@
                 dnaConfig: {},
             };
             var player = videojs("demoplayer", options);
-            player.src("http://vod-l3.delivery.streamroot.io/vodOrigin/tos1500.mp4/playlist.m3u8");
-            </script>
+
+
+            <div id="streamroot-graphs">Graphe</div>
+
+        </script>
+
+
+
 
     </body>
 
