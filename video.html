@@ -1,54 +1,79 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <title>Video.js DNA </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://samples.streamroot.io/web/assets/demo-pages.css">
 
-     <!-- Video.js build -->
-     <link href="//vjs.zencdn.net/7.4.1/video-js.min.css" rel="stylesheet">
-     <script src="//vjs.zencdn.net/7.4.1/video.min.js"></script>
- 
-     <!-- Streamroot source handler plugin -->
-     <script src="//cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
- 
-     <!-- Streamroot DNA plugin -->
-     <!-- <script src="//cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#srKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script> -->
-     <script src="//cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#streamrootKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
+    <!-- Makes the header -->
+    <script src="https://samples.streamroot.io/web/assets/header.js"></script>
 
-    
-     <!-- Graph -->
-     <script src="//tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
+    <!-- Video.js Builds -->
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.min.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.4.1/video.min.js"></script>
 
-     <title> VIDEO </title>
+    <!-- Streamroot Builds -->
+    <script src="https://cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#streamrootKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
+    <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+
+    <!-- Graphs -->
+    <script src="https://tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
 </head>
 
+<body>
 
-    <body>
-        <header>EXERCICE 1.1</header>
+    
+    <center>
+        <h1>
+            Video.js DNA
+        </h1>
         <div>
-            <video id="demoplayer" width=512 height=288 class="video-js vjs-default-skin" controls autoplay muted>
+            <video id=demoplayer width=512 height=288 class="video-js vjs-default-skin" controls autoplay muted>
                 <source src='https://demo-vod.streamroot.io/index.m3u8' type="application/x-mpegURL">
             </video>
         </div>
+        <div id="streamroot-graphs"></div>
+
+        <input type="submit" id="button" value="Disable P2P Upload" onclick="disableEnableUpload()">
+
+
+    </center>
     <script>
+
+        function disableEnableUpload(){ //When user clicks on button
+
+            if(button.value === "Disable P2P Upload")
+            { 
+                Streamroot.instances[0].dnaUploadOnWifiEthernetAllowed = false; //Disable upload
+                button.value = "Enable P2P Upload"; //Change button value to enable
+               
+            } else {
+                Streamroot.instances[0].dnaUploadOnWifiEthernetAllowed = true; //Enable upload
+                button.value = "Disable P2P Upload"; //Change button value to disable
+            }
+
+        }
+
+
         var options = {
             dnaConfig: {},
             html5: {
-                hlsjsConfig: {
-                    "maxBufferSize": 0,
-                    "maxBufferLength": 30,
-                    "liveSyncDuration": 30,
-                    "liveMaxLatencyDuration": Infinity
-                }
+                hlsjsConfig: {}
             }
         };
         var player = videojs('demoplayer', options);
-        <div id="streamroot-graphs">Graphe</div>
-
     </script>
 
-    </body>
-
-
-
+</body>
+​
 
 </html>
-
+​

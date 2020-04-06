@@ -11,19 +11,16 @@ Pay attention to :
 
 ## Exercice 1 
 
-Tested on iOS - Safari because not compatible on Chrome for iOS
+1. Create a page (video.html) with Video.js player. Generate P2P by opening 2 tabs at the same time. 
 
-1. Create a page with Video.js player. Generate P2P by opening 2 tabs at the same time. 
-The page is named video.html
+2. Create 2 test pages using : Cloudfront stream (cloudfrontHLS.html) and Level3 stream (level3HLS.html). Generate P2P by using contentIdGenerator.
 
-2. Create 2 test pages using : Cloudfront stream and Level3 stream. Generate P2P by using contentIdGenerator.
-The pages are called cloudfrontHLS.html and level3HLS.html
+3. Bonus : Button to disable/enable upload in video.html page.
 
-3. Bonus : Add a button to enable/disable P2P upload.
 
 ### Recommendations for the documentation
 
-
+- Offer a French version of the documentation because of the technical terms
 
 ### Recommendations for the dashboard 
 
@@ -38,5 +35,5 @@ The pages are called cloudfrontHLS.html and level3HLS.html
 2. Write an email to customer to explain the issue.
 3. Write an issue report for developpers to help them fix the issue ASAP.
 
-
+Issue : the page can't find other peer to connect with, so no upload and no DNA possible either 
 
