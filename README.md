@@ -28,12 +28,13 @@ Pay attention to :
 
 
 
-
 ## Exercice 2
 
 1. Find the issue in the customer's html page.
-2. Write an email to customer to explain the issue.
-3. Write an issue report for developpers to help them fix the issue ASAP.
-
 Issue : the page can't find other peer to connect with, so no upload and no DNA possible either 
+
+2. Write an email (customerEmail.pdf) to customer to explain the issue.
+
+3. Write an issue report (reportIssue.pdf) for developpers to help them fix the issue ASAP.
+
 
